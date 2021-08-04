@@ -3,3 +3,111 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem 2rem;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background-color: rgb(88, 88, 88);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.controls button:hover {
+  background-color: #fff;
+  color: rgb(88, 88, 88);
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+.kick-pad {
+  background: rgb(180, 211, 224);
+}
+
+.kick-pad.active {
+  background: rgb(59, 197, 231);
+}
+
+.snare-pad {
+  background: rgb(224, 180, 224);
+}
+
+.snare-pad.active {
+  background: rgb(240, 124, 240);
+}
+
+.hihat-pad {
+  background: rgb(167, 192, 178);
+}
+
+.hihat-pad.active {
+  background: rgb(168, 252, 204);
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.kick .pad,
+.snare .pad,
+.hihat .pad {
+  display: flex;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: rgb(88, 88, 88);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+}

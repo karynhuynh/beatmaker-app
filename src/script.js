@@ -6,6 +6,7 @@ class DrumKit {
     this.snareAudio = document.querySelectorAll(".snare-sound");
     this.hihatAudio = document.querySelectorAll(".hihat-sound");
     this.index = 0;
+    // beats per minute(bpm)
     this.bpm = 150;
   }
   activePad() {
@@ -14,6 +15,10 @@ class DrumKit {
   repeat() {
     let step = this.index % 8; //when we arrive to 8 in the index, the step will revert back to 0
     const activeBars = document.querySelectorAll(`.b${step}`);
+    // loop over the pads and create animation
+    activeBars.forEach((bar) => {
+      bar.style.animation = "playTrack 0.3s alternate ease-in-out 2";
+    });
     this.index++;
   }
   start() {
@@ -27,6 +32,10 @@ class DrumKit {
 const drumKit = new DrumKit();
 drumKit.pads.forEach((pad) => {
   pad.addEventListener("click", drumKit.activePad);
+  pad.addEventListener("animationend", function () {
+    // set to nothing to restart the loop
+    this.style.animation = "";
+  });
 });
 
 drumKit.playBtn.addEventListener("click", function () {

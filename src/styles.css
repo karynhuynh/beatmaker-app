@@ -58,7 +58,7 @@ svg {
 }
 
 .kick-pad.active {
-  background: rgb(59, 197, 231);
+  background: rgb(40, 137, 161);
 }
 
 .snare-pad {
@@ -66,7 +66,7 @@ svg {
 }
 
 .snare-pad.active {
-  background: rgb(240, 124, 240);
+  background: rgb(177, 90, 177);
 }
 
 .hihat-pad {
@@ -74,7 +74,7 @@ svg {
 }
 
 .hihat-pad.active {
-  background: rgb(168, 252, 204);
+  background: rgb(81, 126, 101);
 }
 
 .kick-track,
@@ -104,7 +104,7 @@ svg {
   color: #fff;
   border: none;
   cursor: pointer;
-  margin-top: 3rem;
+  margin-top: 6rem;
 }
 
 select {
